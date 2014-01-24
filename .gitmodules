@@ -10,3 +10,6 @@
 [submodule "3rd_party/nerdtree"]
 	path = 3rd_party/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "3rd_party/nerdcommenter"]
+	path = 3rd_party/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
