@@ -34,6 +34,15 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript
 autocmd BufNewFile,BufRead *.htm* set filetype=html
 autocmd BufNewFile,BufRead *.conf set filetype=conf
 
+"
+" File encodings
+"
+set fileencodings=utf-8,default,latin1
+
+"
+" How many entries to keep in history
+"
+set history=10
 
 "
 " Add special configuration for plugins
@@ -54,6 +63,15 @@ set foldlevel=1         "this is just what i use
 " http://www.cs.swarthmore.edu/help/vim/indenting.html
 "
 set shiftwidth=2        "fix block indenting width
+"
+" Disable line numbers on the left.
+"
+set nonumber
+
+"
+" smart indentation
+"
+set autoindent
 
 "
 " Tabs
