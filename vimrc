@@ -17,7 +17,7 @@ colorscheme elflord
 "
 " And now add pathogen!
 "
-execute pathogen#infect('~/.vim/')
+execute pathogen#infect('~/.vim//{}')
 syntax on
 filetype on
 
