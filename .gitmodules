@@ -7,3 +7,6 @@
 [submodule "3rd_party/tagbar-phpctags"]
 	path = 3rd_party/tagbar-phpctags
 	url = https://github.com/vim-scripts/tagbar-phpctags.git
+[submodule "3rd_party/nerdtree"]
+	path = 3rd_party/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
