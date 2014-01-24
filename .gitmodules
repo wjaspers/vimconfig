@@ -4,3 +4,6 @@
 [submodule "3rd_party/tagbar"]
 	path = 3rd_party/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "3rd_party/tagbar-phpctags"]
+	path = 3rd_party/tagbar-phpctags
+	url = https://github.com/vim-scripts/tagbar-phpctags.git

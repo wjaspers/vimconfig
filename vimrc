@@ -36,6 +36,13 @@ autocmd BufNewFile,BufRead *.conf set filetype=conf
 
 
 "
+" Add special configuration for plugins
+"
+let g:tagbar_phpctags_bin='~/.vim/.bin/tagbar-phpctags'
+let g:tagbar_phpctags_memory_limit='128M'
+
+
+"
 " Folding settings
 "
 set foldmethod=indent   "fold based on indent
