@@ -16,3 +16,6 @@
 [submodule "3rd_party/syntastic"]
 	path = 3rd_party/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "3rd_party/vim-fugitive"]
+	path = 3rd_party/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
