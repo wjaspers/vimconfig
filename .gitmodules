@@ -13,3 +13,6 @@
 [submodule "3rd_party/nerdcommenter"]
 	path = 3rd_party/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "3rd_party/syntastic"]
+	path = 3rd_party/syntastic
+	url = https://github.com/scrooloose/syntastic.git
