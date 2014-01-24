@@ -17,7 +17,7 @@ colorscheme elflord
 "
 " And now add pathogen!
 "
-execute pathogen#infect('~/.vim//{}')
+execute pathogen#infect()
 syntax on
 filetype on
 
@@ -49,3 +49,11 @@ set foldlevel=1         "this is just what i use
 "
 set expandtab 			"many languages rely on spaces instead of tabs
 set tabstop=4			"indent with 4 spaces
+
+
+"
+" And now the fun part, key bindings!
+"
+
+" hide/show the tagbar by pressing a key.
+nmap <F8> :TagbarToggle<CR>
