@@ -35,6 +35,11 @@ autocmd BufNewFile,BufRead *.htm* set filetype=html
 autocmd BufNewFile,BufRead *.conf set filetype=conf
 
 "
+" Keep searches open in a separate window.
+"
+autocmd QuickFixCmdPost *grep* cwindow
+
+"
 " File encodings
 "
 set fileencodings=utf-8,default,latin1
@@ -78,7 +83,6 @@ set autoindent
 "
 set expandtab 			"many languages rely on spaces instead of tabs
 set tabstop=4			"indent with 4 spaces
-
 
 "
 " And now the fun part, key bindings!
