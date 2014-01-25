@@ -16,15 +16,14 @@ fi
 
 execute_nice() {
     COMMAND="$1"
-    OPTS=""
-    if [[ $VERBOSE -le 1 ]]; then
-        OPTS=">/dev/null 2>&1"
+    if [[ $VERBOSE -gt 0 ]]; then
+        COMMAND="$COMMAND 2>&1"
     fi
 
     #
     # Execute the command in a subshell.
     #
-    LAST_RESULT="$($COMMAND) $OPTS"
+    LAST_RESULT=$($COMMAND)
 
     #
     # Make sure the caller can find success/failure.
@@ -65,8 +64,19 @@ fi
 # See if .vim already exists in the user's profile.
 #
 println "[sh]: Looking for a .vim user profile"
-if [ -d "$HOME/.vim" ]; then
+if [ -e "$HOME/.vim" ]; then
     println "Oops! A .vim folder already exists in your profile."
+    println "  You may want to backup your folder first."
+    exit_clean 1
+fi
+
+#
+# See if a vimrc already exists in the user's profile.
+#
+println "[sh]: Looking for a .vimrc configuration"
+if [ -e "$HOME/.vimrc" ]; then
+    println "Oops! A .vimrc already exists in your profile."
+    println "  You may want to backup for existing configuration first."
     exit_clean 1
 fi
 
@@ -116,7 +126,14 @@ execute_nice "chmod +x .bin/*"
 # Link the repository to .vim/
 #
 println "[sh]: Creating symbolic link to .vim profile from repository."
+cd $HOME
 execute_nice "ln -sv $REPO_HOME $HOME/.vim"
+
+#
+# Now link the vimrc and we're done.
+#
+println "[sh]: Creating a .vimrc."
+execute_nice "ln -sv $REPO_HOME/vimrc.dist $HOME/.vimrc"
 
 #
 # Return to the folder we started from
