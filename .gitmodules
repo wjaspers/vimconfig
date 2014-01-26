@@ -22,3 +22,6 @@
 [submodule "3rd_party/javascript-ctags"]
 	path = 3rd_party/javascript-ctags
 	url = https://github.com/andersjanmyr/javascript-ctags.git
+[submodule "3rd_party/markdown2ctags"]
+	path = 3rd_party/markdown2ctags
+	url = https://github.com/jszakmeister/markdown2ctags.git

@@ -55,7 +55,21 @@ set history=10
 "
 let g:tagbar_phpctags_bin='~/.vim/.bin/phpctags'
 let g:tagbar_phpctags_memory_limit='128M'
-
+" Add support for markdown files in tagbar.
+let g:tagbar_type_markdown = {
+    \ 'ctagstype': 'markdown',
+    \ 'ctagsbin' : '.bin/markdown2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
 
 "
 " Folding settings
