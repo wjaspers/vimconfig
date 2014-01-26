@@ -19,3 +19,6 @@
 [submodule "3rd_party/vim-fugitive"]
 	path = 3rd_party/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "3rd_party/javascript-ctags"]
+	path = 3rd_party/javascript-ctags
+	url = https://github.com/andersjanmyr/javascript-ctags.git

@@ -85,6 +85,10 @@ if confirm "Download all the bundles now?"; then
         println "Oops! We couldn't download all the bundles."
         exit_clean 1
     fi
+    #
+    # Run NPM on bundles that require it.
+    #
+    execute_nice "git submodule foreach npm install"
 else
     println "You will need to manually install the required bundles."
     println "You can do this with:"
