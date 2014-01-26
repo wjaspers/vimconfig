@@ -18,7 +18,7 @@ A simple repository for cloning my vim configuration across multiple machines. U
 ### Scripted Installation
 1. Clone the repository to a location of your choosing.
 2. Run `./.bin/install.sh`
-3. Enjoy!
+3. Follow the prompts and enjoy!
 
 ### Installation Notes
 * Requires `git`
