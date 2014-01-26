@@ -28,6 +28,7 @@ filetype plugin on
 autocmd BufNewFile,BufRead *.php set filetype=php
 autocmd BufNewFile,BufRead *.sql set filetype=sql
 autocmd BufNewFile,BufRead *.yml set filetype=yaml
+autocmd BufNewFile,BufRead *.yaml set filetype=yaml
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.xml set filetype=xml
 autocmd BufNewFile,BufRead *.js set filetype=javascript
