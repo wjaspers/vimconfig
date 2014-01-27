@@ -9,10 +9,10 @@ source "$DIRNAME/lib/utils.sh"
 debug "[sh]: Looking for package: vim"
 execute_nice "command -v vim"
 if [ $? -ne 0 ]; then
-    debug "VIM is not installed."
+    println "VIM is not installed."
     if confirm "Install \"vim\" now?"; then
         execute_nice "sudo apt-get install vim"
-        if [[ $? -ne 0 ]]; then
+        if [ $? -ne 0 ]; then
             debug "There was a problem installing \"vim\"."
             exit_clean 1
         fi
@@ -30,10 +30,10 @@ fi
 debug "[sh]: Looking for package: git"
 execute_nice "command -v git"
 if [ $? -ne 0 ]; then
-    debug "Git is not installed."
+    println "Git is not installed."
     if confirm "Install \"git\" now?"; then
         execute_nice "sudo apt-get install git-core"
-        if [[ $? -ne 0 ]]; then
+        if [ $? -ne 0 ]; then
             debug "There was a problem installing \"git\"."
             exit_clean 1
         fi
@@ -44,6 +44,25 @@ if [ $? -ne 0 ]; then
     fi
 fi
 
+#
+# Try to find npm
+#
+debug "[sh]: Looking for package: npm"
+execute_nice "command -v npm"
+if [ $? -ne 0 ]; then
+    println "npm is not installed."
+    if confirm "Install \"npm\" now?"; then
+        execute_nice "sudo apt-get install npm"
+        if [ $? -ne 0 ]; then
+            debug "There ws a problem installing \"npm\"."
+            exit_clean 1
+        fi
+    else
+        println "You may be able to install it yourself with:"
+        println "  sudo apt-get install npm"
+        exit_clean 1
+    fi
+fi
 
 #
 # Find out where the repo lives.
