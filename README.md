@@ -23,5 +23,8 @@ A simple repository for cloning my vim configuration across multiple machines. U
 ### Installation Notes
 * Requires `git`
 * Requires `vim`
+* Requires `npm` + `nodejs`
 * Requires the `sh` shell
   * Most `*nix` systems are distributed with `sh` so you should have no problem running this.
+* Can prompt to install `git`, `vim`, and `npm`.
+* If you have an existing `.vim` profile and `.vimrc`, the installer will help back them up.
