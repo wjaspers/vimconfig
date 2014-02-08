@@ -25,3 +25,45 @@
 [submodule "3rd_party/markdown2ctags"]
 	path = 3rd_party/markdown2ctags
 	url = https://github.com/jszakmeister/markdown2ctags.git
+[submodule "3rd_party/mru"]
+	path = 3rd_party/mru
+	url = https://github.com/yegappan/mru.git
+[submodule "3rd_party/peaksea"]
+	path = 3rd_party/peaksea
+	url = https://github.com/vim-scripts/peaksea.git
+[submodule "3rd_party/vim-less"]
+	path = 3rd_party/vim-less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "3rd_party/vim-snipmate"]
+	path = 3rd_party/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "3rd_party/vim-snippets"]
+	path = 3rd_party/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "3rd_party/ctrlp"]
+	path = 3rd_party/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "3rd_party/vim-indent-object"]
+	path = 3rd_party/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "3rd_party/vim-surround"]
+	path = 3rd_party/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "3rd_party/vim-markdown"]
+	path = 3rd_party/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "3rd_party/vim-airline"]
+	path = 3rd_party/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "3rd_party/taglist.vim"]
+	path = 3rd_party/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "3rd_party/tlib"]
+	path = 3rd_party/tlib
+	url = https://github.com/vim-scripts/tlib.git
+[submodule "3rd_party/vim-multiple-cursors"]
+	path = 3rd_party/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "3rd_party/vim-addon-mw-utils"]
+	path = 3rd_party/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
