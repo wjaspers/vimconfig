@@ -28,3 +28,8 @@ A simple repository for cloning my vim configuration across multiple machines. U
   * Most `*nix` systems are distributed with `sh` so you should have no problem running this.
 * Can prompt to install `git`, `vim`, and `npm`.
 * If you have an existing `.vim` profile and `.vimrc`, the installer will help back them up.
+
+
+## Credits
+* [The ultimate Vim configuration: vimrc](https://github.com/amix/vimrc)
+ * Borrowed the basic/extended/filetypes configurations it provides.
