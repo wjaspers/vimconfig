@@ -7,24 +7,23 @@ if &shell =~# 'fish$'
    set shell=sh
 endif
 
-
-"
-" Set your preferred color scheme
-"
-colorscheme elflord
-
-
 "
 " And now add pathogen!
 "
 execute pathogen#infect()
-syntax on
-filetype on
-filetype plugin on
 
 "
-" Set filetypes by extension
+" Borrowing the basic VIMRC from the "ultimate vimrc".
 "
+source ~/.vim/amx-vimrc-extended.vim
+source ~/.vim/amx-vimrc-filetypes.vim
+autocmd QuickFixCmdPost *grep* cwindow
+
+"
+" File encodings
+"
+set fileencodings=utf-8,default,latin1
+
 autocmd BufNewFile,BufRead *.php set filetype=php
 autocmd BufNewFile,BufRead *.sql set filetype=sql
 autocmd BufNewFile,BufRead *.yml set filetype=yaml
@@ -35,15 +34,6 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript
 autocmd BufNewFile,BufRead *.htm* set filetype=html
 autocmd BufNewFile,BufRead *.conf set filetype=conf
 
-"
-" Keep searches open in a separate window.
-"
-autocmd QuickFixCmdPost *grep* cwindow
-
-"
-" File encodings
-"
-set fileencodings=utf-8,default,latin1
 
 "
 " How many entries to keep in history
@@ -97,30 +87,10 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
-"
-" Borrowed from:
-" http://www.cs.swarthmore.edu/help/vim/indenting.html
-"
-set shiftwidth=2        "fix block indenting width
+
 "
 " Disable line numbers on the left.
 "
 set nonumber
 
-"
-" smart indentation
-"
-set autoindent
-
-"
-" Tabs
-"
-set expandtab 			"many languages rely on spaces instead of tabs
-set tabstop=4			"indent with 4 spaces
-
-"
-" And now the fun part, key bindings!
-"
-
-" hide/show the tagbar by pressing a key.
 nmap <F8> :TagbarToggle<CR>
