@@ -45,6 +45,26 @@ if [ $? -ne 0 ]; then
 fi
 
 #
+# Try to find exuberant-ctags
+#
+debug "[sh]: Looking for package: exuberant-ctags"
+execute_nice "command -v ctags"
+if [ $? -ne 0 ]; then
+    println "exuberant-ctags is not installed."
+    if confirm "Install \"exuberant-ctags\" now?"; then
+        execute_nice "sudo apt-get install exuberant-ctags"
+        if [ $? -ne 0 ]; then
+            debug "There ws a problem installing \"exuberant-ctags\"."
+            exit_clean 1
+        fi
+    else
+        println "You may be able to install it yourself with:"
+        println "  sudo apt-get install exuberant-ctags"
+        exit_clean 1
+    fi
+fi
+
+#
 # Try to find npm
 #
 debug "[sh]: Looking for package: npm"
