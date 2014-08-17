@@ -8,6 +8,19 @@ if &shell =~# 'fish$'
 endif
 
 "
+" Enable mouse support
+"
+set mouse=a
+
+"
+" If we're running in a terminal manager,
+" we may need to alter how mouse support is provided.
+"
+if &term=~'^screen'
+    set ttym=xterm
+endif
+
+"
 " And now add pathogen!
 "
 execute pathogen#infect()
